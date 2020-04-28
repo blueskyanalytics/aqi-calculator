@@ -40,9 +40,9 @@ const calculateSubIndex = (arr = [], pollutant) => {
 
   const [pollutantLo, pollutantHi] = BANDS[index].range[pollutant];
 
-  // this is the basically the line equation where we take the ratio of slopes of
-  // the two lines. two lines representing linear relation between subIndex and concentrations
-  // Linear algebra 101
+  // this is the basically the line equation where we take the ratio of slopes
+  // of the two lines. two lines representing linear relation between subIndex
+  // and concentrations Linear algebra 101
   const aqi =
     ((aqiHi - aqiLo) / (pollutantHi - pollutantLo)) * (mean - pollutantLo) +
     aqiLo;
@@ -50,7 +50,7 @@ const calculateSubIndex = (arr = [], pollutant) => {
 };
 
 const calculateAQI = (arr) => {
-  //validation
+  // validation
   if (!Array.isArray(arr) || arr.length === 0) return 0;
 
   // Get the data in proper format

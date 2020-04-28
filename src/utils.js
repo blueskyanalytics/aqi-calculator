@@ -100,4 +100,7 @@ const HOUR_DIFF = {
   co: 8,
 };
 
-module.exports = { BANDS, HOUR_DIFF };
+module.exports = {
+  BANDS,
+  HOUR_DIFF,
+};
