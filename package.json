@@ -1,0 +1,30 @@
+{
+  "name": "aqi-calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "parcel build src/aqi-calculator.js --global calculateAQI",
+    "serve": "parcel serve src/aqi-calculator.js --global calculateAQI",
+    "watch": "parcel watch src/aqi-calculator.js --global calculateAQI",
+    "test": "jest src/aqi-calculator.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blueskyanalytics/aqi-calculator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blueskyanalytics/aqi-calculator/issues"
+  },
+  "homepage": "https://github.com/blueskyanalytics/aqi-calculator#readme",
+  "dependencies": {
+    "dayjs": "^1.8.25"
+  },
+  "devDependencies": {
+    "jest": "^25.4.0",
+    "parcel": "^1.12.4"
+  }
+}
