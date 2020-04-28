@@ -1,4 +1,5 @@
 const calculateAQI = require("./aqi-calculator");
+
 const data = [
   {
     datetime: "2020-04-27T13:00:00.000Z",
