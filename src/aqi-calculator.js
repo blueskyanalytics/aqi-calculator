@@ -23,6 +23,7 @@ const calculateSubIndex = (arr = [], pollutant) => {
 
   // Find which aqi bands it belongs
   const index = BANDS.findIndex(({ range }) => range[pollutant][1] >= mean);
+  
   // Edge Case
   // if it exceeds the set bands
   if (index < 0) {
