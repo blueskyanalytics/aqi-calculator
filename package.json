@@ -1,6 +1,6 @@
 {
   "name": "aqi-calculator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "dist/aqi-calculator.min.js",
   "scripts": {
