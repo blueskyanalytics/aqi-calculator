@@ -1,131 +1,27 @@
-// modules are defined as an array
-// [ module function, map of requires ]
-//
-// map of requires is short require name -> numeric require
-//
-// anything defined in a previous bundle is accessed via the
-// orig method which is the require for previous bundles
-parcelRequire = (function (modules, cache, entry, globalName) {
-  // Save the require from previous bundle to this closure if any
-  var previousRequire = typeof parcelRequire === 'function' && parcelRequire;
-  var nodeRequire = typeof require === 'function' && require;
+(function () {
+// ASSET: dayjs.min.js
+var $KAlz$exports = {};
+var $KAlz$var$define;
 
-  function newRequire(name, jumped) {
-    if (!cache[name]) {
-      if (!modules[name]) {
-        // if we cannot find the module within our internal map or
-        // cache jump to the current global require ie. the last bundle
-        // that was added to the page.
-        var currentRequire = typeof parcelRequire === 'function' && parcelRequire;
-        if (!jumped && currentRequire) {
-          return currentRequire(name, true);
-        }
+function $KAlz$var$_typeof(obj) {
+  "@babel/helpers - typeof";
 
-        // If there are other bundles on this page the require from the
-        // previous one is saved to 'previousRequire'. Repeat this as
-        // many times as there are bundles until the module is found or
-        // we exhaust the require chain.
-        if (previousRequire) {
-          return previousRequire(name, true);
-        }
-
-        // Try the node require function if it exists.
-        if (nodeRequire && typeof name === 'string') {
-          return nodeRequire(name);
-        }
-
-        var err = new Error('Cannot find module \'' + name + '\'');
-        err.code = 'MODULE_NOT_FOUND';
-        throw err;
-      }
-
-      localRequire.resolve = resolve;
-      localRequire.cache = {};
-
-      var module = cache[name] = new newRequire.Module(name);
-
-      modules[name][0].call(module.exports, localRequire, module, module.exports, this);
-    }
-
-    return cache[name].exports;
-
-    function localRequire(x){
-      return newRequire(localRequire.resolve(x));
-    }
-
-    function resolve(x){
-      return modules[name][1][x] || x;
-    }
+  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+    $KAlz$var$_typeof = function _typeof(obj) {
+      return typeof obj;
+    };
+  } else {
+    $KAlz$var$_typeof = function _typeof(obj) {
+      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    };
   }
 
-  function Module(moduleName) {
-    this.id = moduleName;
-    this.bundle = newRequire;
-    this.exports = {};
-  }
-
-  newRequire.isParcelRequire = true;
-  newRequire.Module = Module;
-  newRequire.modules = modules;
-  newRequire.cache = cache;
-  newRequire.parent = previousRequire;
-  newRequire.register = function (id, exports) {
-    modules[id] = [function (require, module) {
-      module.exports = exports;
-    }, {}];
-  };
-
-  var error;
-  for (var i = 0; i < entry.length; i++) {
-    try {
-      newRequire(entry[i]);
-    } catch (e) {
-      // Save first error but execute all entries
-      if (!error) {
-        error = e;
-      }
-    }
-  }
-
-  if (entry.length) {
-    // Expose entry point to Node, AMD or browser globals
-    // Based on https://github.com/ForbesLindesay/umd/blob/master/template.js
-    var mainExports = newRequire(entry[entry.length - 1]);
-
-    // CommonJS
-    if (typeof exports === "object" && typeof module !== "undefined") {
-      module.exports = mainExports;
-
-    // RequireJS
-    } else if (typeof define === "function" && define.amd) {
-     define(function () {
-       return mainExports;
-     });
-
-    // <script>
-    } else if (globalName) {
-      this[globalName] = mainExports;
-    }
-  }
-
-  // Override the current require with this new one
-  parcelRequire = newRequire;
-
-  if (error) {
-    // throw error from earlier, _after updating parcelRequire_
-    throw error;
-  }
-
-  return newRequire;
-})({"KAlz":[function(require,module,exports) {
-var define;
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+  return $KAlz$var$_typeof(obj);
+}
 
 !function (t, n) {
-  "object" == (typeof exports === "undefined" ? "undefined" : _typeof(exports)) && "undefined" != typeof module ? module.exports = n() : "function" == typeof define && define.amd ? define(n) : t.dayjs = n();
-}(this, function () {
-  "use strict";
-
+  "object" == (typeof $KAlz$exports === "undefined" ? "undefined" : $KAlz$var$_typeof($KAlz$exports)) && "undefined" != "object" ? $KAlz$exports = n() : "function" == typeof $KAlz$var$define && $KAlz$var$define.amd ? $KAlz$var$define(n) : t.dayjs = n();
+}($KAlz$exports, function () {
   var t = "millisecond",
       n = "second",
       e = "minute",
@@ -448,8 +344,9 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     return g(1e3 * t);
   }, g.en = m[l], g.Ls = m, g;
 });
-},{}],"FOZT":[function(require,module,exports) {
-var BANDS = [{
+// ASSET: utils.js
+var $FOZT$exports = {};
+var $FOZT$var$BANDS = [{
   label: "Good",
   color: "#009900",
   range: {
@@ -534,7 +431,7 @@ var BANDS = [{
     aqi: [400, 500]
   }
 }];
-var HOUR_DIFF = {
+var $FOZT$var$HOUR_DIFF = {
   pm25: 24,
   pm10: 24,
   so2: 24,
@@ -542,50 +439,103 @@ var HOUR_DIFF = {
   o3: 8,
   co: 8
 };
-module.exports = {
-  BANDS: BANDS,
-  HOUR_DIFF: HOUR_DIFF
+$FOZT$exports = {
+  BANDS: $FOZT$var$BANDS,
+  HOUR_DIFF: $FOZT$var$HOUR_DIFF
 };
-},{}],"QCct":[function(require,module,exports) {
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+// ASSET: aqi-calculator.js
+var $QCct$exports = {};
 
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function $QCct$var$_toConsumableArray(arr) {
+  return $QCct$var$_arrayWithoutHoles(arr) || $QCct$var$_iterableToArray(arr) || $QCct$var$_unsupportedIterableToArray(arr) || $QCct$var$_nonIterableSpread();
+}
 
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+function $QCct$var$_nonIterableSpread() {
+  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
 
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+function $QCct$var$_iterableToArray(iter) {
+  if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
+}
 
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function $QCct$var$_arrayWithoutHoles(arr) {
+  if (Array.isArray(arr)) return $QCct$var$_arrayLikeToArray(arr);
+}
 
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function $QCct$var$_slicedToArray(arr, i) {
+  return $QCct$var$_arrayWithHoles(arr) || $QCct$var$_iterableToArrayLimit(arr, i) || $QCct$var$_unsupportedIterableToArray(arr, i) || $QCct$var$_nonIterableRest();
+}
 
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function $QCct$var$_nonIterableRest() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
 
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+function $QCct$var$_unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return $QCct$var$_arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(n);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return $QCct$var$_arrayLikeToArray(o, minLen);
+}
 
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+function $QCct$var$_arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
 
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
+  }
 
-var dayjs = require("./dayjs.min");
+  return arr2;
+}
 
-var _require = require("./utils"),
-    BANDS = _require.BANDS,
-    HOUR_DIFF = _require.HOUR_DIFF;
+function $QCct$var$_iterableToArrayLimit(arr, i) {
+  if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
+  var _arr = [];
+  var _n = true;
+  var _d = false;
+  var _e = undefined;
 
-var calculateSubIndex = function calculateSubIndex() {
+  try {
+    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
+      _arr.push(_s.value);
+
+      if (i && _arr.length === i) break;
+    }
+  } catch (err) {
+    _d = true;
+    _e = err;
+  } finally {
+    try {
+      if (!_n && _i["return"] != null) _i["return"]();
+    } finally {
+      if (_d) throw _e;
+    }
+  }
+
+  return _arr;
+}
+
+function $QCct$var$_arrayWithHoles(arr) {
+  if (Array.isArray(arr)) return arr;
+}
+
+var $QCct$var$BANDS = $FOZT$exports.BANDS,
+    $QCct$var$HOUR_DIFF = $FOZT$exports.HOUR_DIFF;
+
+var $QCct$var$calculateSubIndex = function calculateSubIndex() {
   var arr = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
-  var pollutant = arguments.length > 1 ? arguments[1] : undefined;
-  // If not a known pollutant
-  if (!Object.keys(HOUR_DIFF).includes(pollutant)) return null; // FIlter the values based on hours and null check
+  var pollutant = arguments.length > 1 ? arguments[1] : undefined; // If not a known pollutant
 
-  var now = dayjs(); // Hour diff specific to pollutant
+  if (!Object.keys($QCct$var$HOUR_DIFF).includes(pollutant)) return null; // FIlter the values based on hours and null check
 
-  var hourDiff = HOUR_DIFF[pollutant];
+  var now = $KAlz$exports(); // Hour diff specific to pollutant
+
+  var hourDiff = $QCct$var$HOUR_DIFF[pollutant];
   var filtered = arr.filter(function (_ref) {
     var datetime = _ref.datetime,
         value = _ref.value;
-    return value && now.diff(dayjs(datetime), 'hours') < hourDiff;
+    return value && now.diff($KAlz$exports(datetime), "hours") < hourDiff;
   }); // If no values left, aqi is considered 0
 
   if (filtered.length <= 0) return null; // Average out the values
@@ -595,27 +545,27 @@ var calculateSubIndex = function calculateSubIndex() {
     return acc + value;
   }, 0) / filtered.length; // Find which aqi bands it belongs
 
-  var index = BANDS.findIndex(function (_ref3) {
+  var index = $QCct$var$BANDS.findIndex(function (_ref3) {
     var range = _ref3.range;
     return range[pollutant][1] >= mean;
   }); // Edge Case
   // if it exceeds the set bands
 
   if (index < 0) {
-    var lastIndex = BANDS.length - 1;
-    var aqiBase = BANDS[lastIndex].range.aqi[1];
-    var pollutantBase = BANDS[lastIndex].range[pollutant][1];
+    var lastIndex = $QCct$var$BANDS.length - 1;
+    var aqiBase = $QCct$var$BANDS[lastIndex].range.aqi[1];
+    var pollutantBase = $QCct$var$BANDS[lastIndex].range[pollutant][1];
 
     var _aqi = aqiBase / pollutantBase * (mean - pollutantBase) + aqiBase;
 
     return _aqi;
   }
 
-  var _BANDS$index$range$aq = _slicedToArray(BANDS[index].range.aqi, 2),
+  var _BANDS$index$range$aq = $QCct$var$_slicedToArray($QCct$var$BANDS[index].range.aqi, 2),
       aqiLo = _BANDS$index$range$aq[0],
       aqiHi = _BANDS$index$range$aq[1];
 
-  var _BANDS$index$range$po = _slicedToArray(BANDS[index].range[pollutant], 2),
+  var _BANDS$index$range$po = $QCct$var$_slicedToArray($QCct$var$BANDS[index].range[pollutant], 2),
       pollutantLo = _BANDS$index$range$po[0],
       pollutantHi = _BANDS$index$range$po[1]; // this is the basically the line equation where we take the ratio of slopes of
   // the two lines. two lines representing linear relation between subIndex and concentrations
@@ -626,31 +576,44 @@ var calculateSubIndex = function calculateSubIndex() {
   return aqi;
 };
 
-var calculateAQI = function calculateAQI(arr) {
+var $QCct$var$calculateAQI = function calculateAQI(arr) {
   // validation
   if (!Array.isArray(arr) || arr.length === 0) return null; // Get the data in proper format
 
   var pollutantArr = arr.reduce(function (acc, val) {
-    Object.keys(HOUR_DIFF).map(function (key) {
+    Object.keys($QCct$var$HOUR_DIFF).map(function (key) {
       var obj = {
         datetime: val.datetime,
         value: val[key]
       };
-      acc[key] = acc[key] ? [].concat(_toConsumableArray(acc[key]), [obj]) : [obj];
+      acc[key] = acc[key] ? [].concat($QCct$var$_toConsumableArray(acc[key]), [obj]) : [obj];
     });
     return acc;
   }, {}); // Calculate subIndex of each pollutant
 
   var subIndexes = Object.keys(pollutantArr).map(function (key) {
-    return calculateSubIndex(pollutantArr[key], key);
+    return $QCct$var$calculateSubIndex(pollutantArr[key], key);
   }).filter(function (val) {
     return val;
   });
   if (subIndexes.length === 0) return null; // The good stuff
 
-  var nAQI = Math.max.apply(Math, _toConsumableArray(subIndexes));
+  var nAQI = Math.max.apply(Math, $QCct$var$_toConsumableArray(subIndexes));
   return Math.round(nAQI);
 };
 
-module.exports = calculateAQI;
-},{"./dayjs.min":"KAlz","./utils":"FOZT"}]},{},["QCct"], "calculateAQI")
+$QCct$exports = $QCct$var$calculateAQI;
+
+if (typeof exports === "object" && typeof module !== "undefined") {
+  // CommonJS
+  module.exports = $QCct$exports;
+} else if (typeof define === "function" && define.amd) {
+  // RequireJS
+  define(function () {
+    return $QCct$exports;
+  });
+} else {
+  // <script>
+  this["calculateAQI"] = $QCct$exports;
+}
+})();
