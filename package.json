@@ -11,7 +11,15 @@
     "type": "git",
     "url": "git+https://github.com/blueskyanalytics/aqi-calculator.git"
   },
-  "keywords": ["AQI", "Air Pollution", "javascript", "js", "umd", "es6", "cjs"],
+  "keywords": [
+    "AQI",
+    "Air Pollution",
+    "javascript",
+    "js",
+    "umd",
+    "es6",
+    "cjs"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
