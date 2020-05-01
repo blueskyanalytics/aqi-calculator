@@ -119,19 +119,19 @@ const DATA = [
   }
 ]
 
-const AQI = () => {
+const AQIComponent = () => {
   const AQI = aqiCalculator(DATA)
   return AQI
 }
 
-export default AQI
+export default AQIComponent
 ```
 
 
 ## Server-Side Example - NodeJs
 
 ```javascript
-aqiCalculator = require("aqi-calculator")
+const aqiCalculator = require("aqi-calculator")
 
 const DATA = [
   {
