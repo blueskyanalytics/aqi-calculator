@@ -1,13 +1,12 @@
 # Air Quality Index (AQI) Calculator
 
-> Free and open AQI calculator. 
+> The package calculates AQI according to the [Indian National AQI Standards](http://www.indiaenvironmentportal.org.in/files/file/Air%20Quality%20Index.pdfhttp:// " Indian National AQI Standards"). This can change in the future as per standards. This is just first version of AQI calculation and we are still awaiting a very standard and clear way of calculating AQI.
 
-aqi-calculator is an NPM package that allows you to calculate Air Quality Index (AQI) with the help of pollutant concentrations ranging from `PM2.5` `PM10` `SO2` `NOX` `O3` `CO`. The package calculates AQI according to the Indian National AQI Standards.
+aqi-calculator is an NPM package that allows you to calculate Air Quality Index (AQI) with the help of pollutant concentrations ranging from `PM2.5` `PM10` `SO2` `NOX` `O3` `CO`.
 
 ## Why aqi-calculator?
 
-We at Blue Sky Analytics make use of AQI calculations to power our air quality application (BreeZo) and its API. Therefore, we are making this independent calculator to set the same standard of calculation across all our applications.
-
+We make use of AQI calculations to power our air quality application [(BreeZo)](https://aqi.breezo.in/ "(BreeZo)") and its API. Therefore, we are making this independent calculator to set the same standard of calculation across all our applications.
 
 ## Installation
 
@@ -47,7 +46,7 @@ npm install aqi-calculator
           co: null,
         },
         {
-          datetime: "2020-03-27T14:00:00.000Z", //Taking the 24-hour average concentration  - change when you use this example 
+          datetime: "2020-03-27T14:00:00.000Z", //Taking the 24-hour average concentration  - change when you use this example
           pm25: 294,
           pm10: 297,
           so2: 3,
@@ -58,7 +57,7 @@ npm install aqi-calculator
           co: null,
         },
         {
-          datetime: "2020-03-27T15:00:00.000Z", //Taking the 24-hour average concentration  - change when you use this example 
+          datetime: "2020-03-27T15:00:00.000Z", //Taking the 24-hour average concentration  - change when you use this example
           pm25: 213,
           pm10: 275,
           so2: 5,
@@ -67,11 +66,11 @@ npm install aqi-calculator
           no2: 19,
           o3: 59,
           co: null,
-        }
-      ]
-      
-      var AQI = aqiCalculator(DATA)
-      document.write(AQI)
+        },
+      ];
+
+      var AQI = aqiCalculator(DATA);
+      document.write(AQI);
     </script>
   </body>
 </html>
@@ -80,12 +79,12 @@ npm install aqi-calculator
 ## Client-Side Example - React
 
 ```javascript
-import React from 'react';
-import aqiCalculator from 'aqi-calculator'
+import React from "react";
+import aqiCalculator from "aqi-calculator";
 
 const DATA = [
   {
-    datetime: "2020-03-27T13:00:00.000Z", //Taking the 24-hour average concentration  - change when you use this example 
+    datetime: "2020-03-27T13:00:00.000Z", //Taking the 24-hour average concentration  - change when you use this example
     pm25: null,
     pm10: null,
     so2: null,
@@ -96,7 +95,7 @@ const DATA = [
     co: null,
   },
   {
-    datetime: "2020-03-27T14:00:00.000Z", //Taking the 24-hour average concentration  - change when you use this example 
+    datetime: "2020-03-27T14:00:00.000Z", //Taking the 24-hour average concentration  - change when you use this example
     pm25: 294,
     pm10: 297,
     so2: 3,
@@ -107,7 +106,7 @@ const DATA = [
     co: null,
   },
   {
-    datetime: "2020-03-27T15:00:00.000Z", //Taking the 24-hour average concentration  - change when you use this example 
+    datetime: "2020-03-27T15:00:00.000Z", //Taking the 24-hour average concentration  - change when you use this example
     pm25: 213,
     pm10: 275,
     so2: 5,
@@ -116,26 +115,25 @@ const DATA = [
     no2: 19,
     o3: 59,
     co: null,
-  }
-]
+  },
+];
 
 const AQIComponent = () => {
-  const AQI = aqiCalculator(DATA)
-  return AQI
-}
+  const AQI = aqiCalculator(DATA);
+  return AQI;
+};
 
-export default AQIComponent
+export default AQIComponent;
 ```
-
 
 ## Server-Side Example - NodeJs
 
 ```javascript
-const aqiCalculator = require("aqi-calculator")
+const aqiCalculator = require("aqi-calculator");
 
 const DATA = [
   {
-    datetime: "2020-03-27T13:00:00.000Z", //Taking the 24-hour average concentration  - change when you use this example 
+    datetime: "2020-03-27T13:00:00.000Z", //Taking the 24-hour average concentration  - change when you use this example
     pm25: null,
     pm10: null,
     so2: null,
@@ -146,7 +144,7 @@ const DATA = [
     co: null,
   },
   {
-    datetime: "2020-03-27T14:00:00.000Z", //Taking the 24-hour average concentration  - change when you use this example 
+    datetime: "2020-03-27T14:00:00.000Z", //Taking the 24-hour average concentration  - change when you use this example
     pm25: 294,
     pm10: 297,
     so2: 3,
@@ -157,7 +155,7 @@ const DATA = [
     co: null,
   },
   {
-    datetime: "2020-03-27T15:00:00.000Z", //Taking the 24-hour average concentration  - change when you use this example 
+    datetime: "2020-03-27T15:00:00.000Z", //Taking the 24-hour average concentration  - change when you use this example
     pm25: 213,
     pm10: 275,
     so2: 5,
@@ -166,10 +164,9 @@ const DATA = [
     no2: 19,
     o3: 59,
     co: null,
-  }
-]
+  },
+];
 
-const AQI = aqiCalculator(DATA)
-console.log(AQI)
-
+const AQI = aqiCalculator(DATA);
+console.log(AQI);
 ```
