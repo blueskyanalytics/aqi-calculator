@@ -1,12 +1,21 @@
 # Air Quality Index (AQI) Calculator
 
-> The package calculates AQI according to the [Indian National AQI Standards](http://www.indiaenvironmentportal.org.in/files/file/Air%20Quality%20Index.pdfhttp:// " Indian National AQI Standards"). This can change in the future as per standards. This is just first version of AQI calculation and we are still awaiting a very standard and clear way of calculating AQI.
+> The package calculates AQI according to the
+> [Indian National AQI Standards](http://www.indiaenvironmentportal.org.in/files/file/Air%20Quality%20Index.pdfhttp:// " Indian National AQI Standards").
+> This can change in the future as per standards. This is just first version of
+> AQI calculation and we are still awaiting a very standard and clear way of
+> calculating AQI.
 
-aqi-calculator is an NPM package that allows you to calculate Air Quality Index (AQI) with the help of pollutant concentrations ranging from `PM2.5` `PM10` `SO2` `NOX` `O3` `CO`.
+aqi-calculator is an NPM package that allows you to calculate Air Quality Index
+(AQI) with the help of pollutant concentrations ranging from `PM2.5` `PM10`
+`SO2` `NOX` `O3` `CO`.
 
 ## Why aqi-calculator?
 
-We make use of AQI calculations to power our air quality application [(BreeZo)](https://aqi.breezo.in/ "(BreeZo)") and its API. Therefore, we are making this independent calculator to set the same standard of calculation across all our applications.
+We make use of AQI calculations to power our air quality application
+[(BreeZo)](https://aqi.breezo.in/ "(BreeZo)") and its API. Therefore, we are
+making this independent calculator to set the same standard of calculation
+across all our applications.
 
 ## Installation
 
