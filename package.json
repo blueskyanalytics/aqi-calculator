@@ -1,17 +1,29 @@
 {
   "name": "aqi-calculator",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "",
-  "main": "dist/aqi-calculator.min.js",
+  "main": "dist/",
   "scripts": {
-    "build": "parcel build src/aqi-calculator.js --out-file dist/aqi-calculator.js --no-minify --no-source-maps --no-cache --experimental-scope-hoisting --global calculateAQI && parcel build src/aqi-calculator.js --out-file dist/aqi-calculator.min.js --no-source-maps --no-cache --experimental-scope-hoisting --global calculateAQI",
+    "minify": "parcel build src/aqi-calculator.js --out-file dist/aqi-calculator.min.js --no-source-maps --no-cache --experimental-scope-hoisting --global calculateAQI",
+    "non-minify": "parcel build src/aqi-calculator.js --out-file dist/aqi-calculator.js --no-minify --no-source-maps --no-cache --experimental-scope-hoisting --global calculateAQI",
+    "main": "parcel build src/index.js --out-file dist/index.js  --no-source-maps --no-cache",
+    "config": "parcel build src/config.js --out-file dist/config.min.js  --no-source-maps --no-cache && parcel build src/config.js --out-file dist/config.js --no-minify  --no-source-maps --no-cache",
+    "build": "npm run minify && npm run non-minify && npm run config && npm run main",
     "test": "jest src/aqi-calculator.test.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/blueskyanalytics/aqi-calculator.git"
   },
-  "keywords": ["AQI", "Air Pollution", "javascript", "js", "umd", "es6", "cjs"],
+  "keywords": [
+    "AQI",
+    "Air Pollution",
+    "javascript",
+    "js",
+    "umd",
+    "es6",
+    "cjs"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
