@@ -1,124 +1,7 @@
-// modules are defined as an array
-// [ module function, map of requires ]
-//
-// map of requires is short require name -> numeric require
-//
-// anything defined in a previous bundle is accessed via the
-// orig method which is the require for previous bundles
-parcelRequire = (function (modules, cache, entry, globalName) {
-  // Save the require from previous bundle to this closure if any
-  var previousRequire = typeof parcelRequire === 'function' && parcelRequire;
-  var nodeRequire = typeof require === 'function' && require;
-
-  function newRequire(name, jumped) {
-    if (!cache[name]) {
-      if (!modules[name]) {
-        // if we cannot find the module within our internal map or
-        // cache jump to the current global require ie. the last bundle
-        // that was added to the page.
-        var currentRequire = typeof parcelRequire === 'function' && parcelRequire;
-        if (!jumped && currentRequire) {
-          return currentRequire(name, true);
-        }
-
-        // If there are other bundles on this page the require from the
-        // previous one is saved to 'previousRequire'. Repeat this as
-        // many times as there are bundles until the module is found or
-        // we exhaust the require chain.
-        if (previousRequire) {
-          return previousRequire(name, true);
-        }
-
-        // Try the node require function if it exists.
-        if (nodeRequire && typeof name === 'string') {
-          return nodeRequire(name);
-        }
-
-        var err = new Error('Cannot find module \'' + name + '\'');
-        err.code = 'MODULE_NOT_FOUND';
-        throw err;
-      }
-
-      localRequire.resolve = resolve;
-      localRequire.cache = {};
-
-      var module = cache[name] = new newRequire.Module(name);
-
-      modules[name][0].call(module.exports, localRequire, module, module.exports, this);
-    }
-
-    return cache[name].exports;
-
-    function localRequire(x){
-      return newRequire(localRequire.resolve(x));
-    }
-
-    function resolve(x){
-      return modules[name][1][x] || x;
-    }
-  }
-
-  function Module(moduleName) {
-    this.id = moduleName;
-    this.bundle = newRequire;
-    this.exports = {};
-  }
-
-  newRequire.isParcelRequire = true;
-  newRequire.Module = Module;
-  newRequire.modules = modules;
-  newRequire.cache = cache;
-  newRequire.parent = previousRequire;
-  newRequire.register = function (id, exports) {
-    modules[id] = [function (require, module) {
-      module.exports = exports;
-    }, {}];
-  };
-
-  var error;
-  for (var i = 0; i < entry.length; i++) {
-    try {
-      newRequire(entry[i]);
-    } catch (e) {
-      // Save first error but execute all entries
-      if (!error) {
-        error = e;
-      }
-    }
-  }
-
-  if (entry.length) {
-    // Expose entry point to Node, AMD or browser globals
-    // Based on https://github.com/ForbesLindesay/umd/blob/master/template.js
-    var mainExports = newRequire(entry[entry.length - 1]);
-
-    // CommonJS
-    if (typeof exports === "object" && typeof module !== "undefined") {
-      module.exports = mainExports;
-
-    // RequireJS
-    } else if (typeof define === "function" && define.amd) {
-     define(function () {
-       return mainExports;
-     });
-
-    // <script>
-    } else if (globalName) {
-      this[globalName] = mainExports;
-    }
-  }
-
-  // Override the current require with this new one
-  parcelRequire = newRequire;
-
-  if (error) {
-    // throw error from earlier, _after updating parcelRequire_
-    throw error;
-  }
-
-  return newRequire;
-})({"itQ5":[function(require,module,exports) {
-var POLLUTANT_LABEL_COLOR_REF = [{
+(function () {
+// ASSET: config.js
+var $itQ5$exports = {};
+var $itQ5$var$POLLUTANT_LABEL_COLOR_REF = [{
   label: "Good",
   color: "#009900"
 }, {
@@ -137,7 +20,7 @@ var POLLUTANT_LABEL_COLOR_REF = [{
   label: "Severe",
   color: "#A52A2A"
 }];
-var POLLUTANT_RANGE_REF = {
+var $itQ5$var$POLLUTANT_RANGE_REF = {
   pm25: [0, 30, 60, 90, 120, 250, 1000],
   pm10: [0, 50, 100, 250, 350, 430, 1000],
   so2: [0, 40, 80, 380, 800, 1600, 2000],
@@ -148,7 +31,7 @@ var POLLUTANT_RANGE_REF = {
   co: [0, 1, 2, 10, 17, 34, 50],
   aqi: [0, 50, 100, 200, 300, 400, 500]
 };
-var POLLUTANT_UNITS = {
+var $itQ5$var$POLLUTANT_UNITS = {
   pm25: "µg/m3",
   pm10: "µg/m3",
   so2: "µg/m3",
@@ -162,7 +45,7 @@ var POLLUTANT_UNITS = {
   no: " µg/m3",
   temperature: "°C"
 };
-var POLLUTANT_FULL_NAME = {
+var $itQ5$var$POLLUTANT_FULL_NAME = {
   // pm1: 'PM 1',
   pm25: "Particulate matter 2.5",
   pm10: "Particulate matter 10",
@@ -178,7 +61,7 @@ var POLLUTANT_FULL_NAME = {
   // toluene: 'Toluene',
 
 };
-var POLLUTANT_OPTIONS = {
+var $itQ5$var$POLLUTANT_OPTIONS = {
   // pm1: 'PM 1',
   pm25: "PM 2.5",
   pm10: "PM 10",
@@ -194,11 +77,21 @@ var POLLUTANT_OPTIONS = {
   // toluene: 'Toluene',
 
 };
-module.exports = {
-  POLLUTANT_LABEL_COLOR_REF: POLLUTANT_LABEL_COLOR_REF,
-  POLLUTANT_RANGE_REF: POLLUTANT_RANGE_REF,
-  POLLUTANT_UNITS: POLLUTANT_UNITS,
-  POLLUTANT_FULL_NAME: POLLUTANT_FULL_NAME,
-  POLLUTANT_OPTIONS: POLLUTANT_OPTIONS
+$itQ5$exports = {
+  POLLUTANT_LABEL_COLOR_REF: $itQ5$var$POLLUTANT_LABEL_COLOR_REF,
+  POLLUTANT_RANGE_REF: $itQ5$var$POLLUTANT_RANGE_REF,
+  POLLUTANT_UNITS: $itQ5$var$POLLUTANT_UNITS,
+  POLLUTANT_FULL_NAME: $itQ5$var$POLLUTANT_FULL_NAME,
+  POLLUTANT_OPTIONS: $itQ5$var$POLLUTANT_OPTIONS
 };
-},{}]},{},["itQ5"], null)
+
+if (typeof exports === "object" && typeof module !== "undefined") {
+  // CommonJS
+  module.exports = $itQ5$exports;
+} else if (typeof define === "function" && define.amd) {
+  // RequireJS
+  define(function () {
+    return $itQ5$exports;
+  });
+}
+})();

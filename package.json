@@ -1,13 +1,13 @@
 {
   "name": "aqi-calculator",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "aqi-calculator is an NPM package that allows you to calculate Air Quality Index (AQI) with the help of pollutant concentrations ranging from PM 2.5, PM 10, SO2, NOX, O3 and CO.",
-  "main": "dist/",
+  "main": "dist/aqi-calculator.min.js",
   "scripts": {
     "minify": "parcel build src/aqi-calculator.js --out-file dist/aqi-calculator.min.js --no-source-maps --no-cache --experimental-scope-hoisting --global calculateAQI",
     "non-minify": "parcel build src/aqi-calculator.js --out-file dist/aqi-calculator.js --no-minify --no-source-maps --no-cache --experimental-scope-hoisting --global calculateAQI",
-    "main": "parcel build src/index.js --out-file dist/index.js  --no-source-maps --no-cache",
-    "config": "parcel build src/config.js --out-file dist/config.min.js  --no-source-maps --no-cache && parcel build src/config.js --out-file dist/config.js --no-minify  --no-source-maps --no-cache",
+    "main": "parcel build src/index.js --out-file dist/index.js  --no-source-maps --no-cache --experimental-scope-hoisting && parcel build src/config.js --out-dir ./  --no-source-maps --no-cache  --experimental-scope-hoisting",
+    "config": "parcel build src/config.js --out-file dist/config.min.js  --no-source-maps --no-cache  --experimental-scope-hoisting  && parcel build src/config.js --out-file dist/config.js --no-minify  --no-source-maps --no-cache  --experimental-scope-hoisting",
     "build": "npm run minify && npm run non-minify && npm run config && npm run main",
     "test": "jest src/aqi-calculator.test.js"
   },
