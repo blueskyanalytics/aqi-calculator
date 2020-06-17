@@ -1,7 +1,7 @@
 {
   "name": "aqi-calculator",
   "version": "1.1.0",
-  "description": "",
+  "description": "aqi-calculator is an NPM package that allows you to calculate Air Quality Index (AQI) with the help of pollutant concentrations ranging from PM 2.5, PM 10, SO2, NOX, O3 and CO.",
   "main": "dist/",
   "scripts": {
     "minify": "parcel build src/aqi-calculator.js --out-file dist/aqi-calculator.min.js --no-source-maps --no-cache --experimental-scope-hoisting --global calculateAQI",
