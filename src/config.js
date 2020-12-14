@@ -38,7 +38,7 @@ const POLLUTANT_FULL_NAME = {
   // pm1: 'PM 1',
   pm25: "Particulate matter 2.5",
   pm10: "Particulate matter 10",
-  so2: "Sulpher dioxide",
+  so2: "Sulphur dioxide",
   // no: "Nitrogen Monoxide",
   nox: "Nitrogen oxides",
   // no2: "Nitrogen Dioxide",
