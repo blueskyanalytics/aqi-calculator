@@ -45,6 +45,20 @@ var $itQ5$var$POLLUTANT_UNITS = {
   no: " µg/m3",
   temperature: "°C"
 };
+var $itQ5$var$POLLUTANT_UNITS_WITH_TAGS = {
+  pm25: "µg/m<sup>3</sup>",
+  pm10: "µg/m<sup>3</sup>",
+  so2: "µg/m<sup>3</sup>",
+  no2: "µg/m<sup>3</sup>",
+  nox: "µg/m<sup>3</sup>",
+  benzene: "µg/m<sup>3</sup>",
+  o3: "µg/m<sup>3</sup>",
+  nh3: "µg/m<sup>3</sup>",
+  co: " mg/m<sup>3</sup>",
+  co2: "µg/m<sup>3</sup>",
+  no: " µg/m<sup>3</sup>",
+  temperature: "°C"
+};
 var $itQ5$var$POLLUTANT_FULL_NAME = {
   // pm1: 'PM 1',
   pm25: "Particulate matter 2.5",
@@ -82,7 +96,8 @@ $itQ5$exports = {
   POLLUTANT_RANGE_REF: $itQ5$var$POLLUTANT_RANGE_REF,
   POLLUTANT_UNITS: $itQ5$var$POLLUTANT_UNITS,
   POLLUTANT_FULL_NAME: $itQ5$var$POLLUTANT_FULL_NAME,
-  POLLUTANT_OPTIONS: $itQ5$var$POLLUTANT_OPTIONS
+  POLLUTANT_OPTIONS: $itQ5$var$POLLUTANT_OPTIONS,
+  POLLUTANT_UNITS_WITH_TAGS: $itQ5$var$POLLUTANT_UNITS_WITH_TAGS
 };
 
 if (typeof exports === "object" && typeof module !== "undefined") {
