@@ -34,6 +34,21 @@ const POLLUTANT_UNITS = {
   temperature: "°C",
 };
 
+const POLLUTANT_UNITS_WITH_TAGS = {
+  pm25: "µg/m<sup>3</sup>",
+  pm10: "µg/m<sup>3</sup>",
+  so2: "µg/m<sup>3</sup>",
+  no2: "µg/m<sup>3</sup>",
+  nox: "µg/m<sup>3</sup>",
+  benzene: "µg/m<sup>3</sup>",
+  o3: "µg/m<sup>3</sup>",
+  nh3: "µg/m<sup>3</sup>",
+  co: " mg/m<sup>3</sup>",
+  co2: "µg/m<sup>3</sup>",
+  no: " µg/m<sup>3</sup>",
+  temperature: "°C",
+};
+
 const POLLUTANT_FULL_NAME = {
   // pm1: 'PM 1',
   pm25: "Particulate matter 2.5",
@@ -74,4 +89,5 @@ module.exports = {
   POLLUTANT_UNITS,
   POLLUTANT_FULL_NAME,
   POLLUTANT_OPTIONS,
+  POLLUTANT_UNITS_WITH_TAGS,
 };
